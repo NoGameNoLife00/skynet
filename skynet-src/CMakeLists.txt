@@ -7,5 +7,8 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} -Wl,-E)
 # 生成可执行文件
 add_executable(skynet_run ${DIR_SRCS})
 
+
+#add_definitions(-DNOUSE_JEMALLOC)
+
 # 添加依赖库
 target_link_libraries(skynet_run jemalloc_pic pthread dl lua m ssl rt)

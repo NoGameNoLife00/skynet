@@ -9,17 +9,17 @@ include_directories(
         skynet-src
         3rd/lua
         3rd/lua-md5
-        3rd/jemalloc/include/jemalloc
         3rd/lpeg
         lualib-src
         lualib-src/sproto
+        /usr/include/jemalloc
 )
 
 # 库路径
-link_directories(
-        /usr/local/lib
-        3rd/jemalloc/lib/
-)
+#link_directories(
+#        /usr/local/lib
+#        /usr/local/jemalloc/lib
+#)
 
 # 编译参数
 add_definitions(-O0 -g -Wall -std=gnu99 -pthread)
